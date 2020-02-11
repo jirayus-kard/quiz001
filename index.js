@@ -16,7 +16,13 @@ document.querySelector('#bookmark-form').addEventListener('submit', function(e) 
         const li = document.createElement('li')
         li.textContent = text
         h2.appendChild(li)
-      }
+    }
+    form.addEventListener('submit', function(e) {
+        e.preventDefault()
+      
+        liMaker(input.value)
+        input.value = ''
+    })
 
 });
    
